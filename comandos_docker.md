@@ -32,19 +32,39 @@ docker pull nombre:version
 docker imagen
 ```
 
-5. Empezar la imagen:
+5. Empezar la imagen (estar dentro de nuestra imagen):
 
 ```shell
 docker run -it -p 8080:8080 imagen
 ```
 
-6. Revisar los procesos de los contenedores que se estén usando en Docker:
+6. Revisar los procesos de los contenedores que se estén usando en Docker (o esten activos):
 
 ```shell
 docker ps
 ```
-o si quieres que aparezca en forma de lista:
+Para revisar los contenedores que se han creado:
 
 ```shell
 docker ps -a
+```
+
+7. Para iniciar un contenedor que ya se ha creado :
+
+NOTA: no estarás dentro del contenedor, pero si lo inicias.
+
+```shell
+docker start container_name
+```
+
+8. Para cerrar o parar el contenedor activo
+
+```shell
+docker stop container_name
+```
+
+9. Para borrar el contenedor:
+
+```shell
+docker rm container_name
 ```
